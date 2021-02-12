@@ -1,0 +1,5 @@
+.posts {
+  @include flex(row, space-around, center);
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}

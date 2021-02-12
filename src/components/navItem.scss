@@ -1,0 +1,43 @@
+.navitem {
+  position: relative;
+  margin: 10px 0;
+  list-style-type: none;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 10px 0;
+  &::before {
+    @include pseudo;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    background-color: $secondary;
+    transform: translateX(-100%);
+    transition: 0.2s;
+  }
+  a {
+    @include flex(row, flex-start, center);
+    text-decoration: none;
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .navitem {
+    margin: 5px 0;
+    a {
+      padding: 5px 0 5px 20px;
+      text-decoration: none;
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .navitem:hover::before {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,14 @@
+.contactPage .navitem {
+  a {
+    font-size: 30px;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    span {
+      margin-left: 10px;
+    }
+    .MuiSvgIcon-root {
+      font-size: 40px;
+      color: $secondary !important;
+    }
+  }
+}

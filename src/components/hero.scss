@@ -1,0 +1,25 @@
+.hero {
+  padding: 20px 40px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.hero__container {
+  @include centerColumn;
+  min-height: 40vh;
+  max-width: 700px;
+  margin: 0 auto;
+  border-bottom: 4px solid $secondary;
+}
+.hero__title {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .hero {
+    &__container {
+      min-height: 30vh;
+    }
+  }
+}

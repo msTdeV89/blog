@@ -1,0 +1,21 @@
+.panel {
+}
+
+.adminPage__form {
+  @include flex(column, space-evenly, center);
+  @include boxshadow;
+  border-radius: 5px;
+  padding: 40px;
+  min-height: 50vh;
+  width: 100%;
+  max-width: 700px;
+  .form__input {
+    width: 100%;
+  }
+  button {
+    width: 100%;
+  }
+}
+.adminPage__form > * {
+  margin-bottom: 20px !important;
+}

@@ -1,0 +1,38 @@
+.sidenav {
+  @include flex(column, flex-start, flex-start);
+  @include boxshadow;
+  padding: 20px 20px;
+  background-color: #fff;
+  z-index: 999;
+  transform: translateY(-530px);
+  transition: 0.25s;
+  opacity: 0;
+  &__list {
+    @include flex(column, space-evenly, flex-end);
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+.sidenav--isOpen {
+  transform: translateY(0);
+  opacity: 1;
+}
+.sidenav--isDark {
+  background-color: $main;
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .sidenav {
+    height: calc(100vh - 80px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sidenav {
+    &__list {
+      @include flex(row, space-evenly, center);
+      height: 80px;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  @include boxshadow;
+  z-index: 1001;
+  background-color: #fff;
+  &__container {
+    padding: 10px 15px;
+    height: 100%;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    @include flex(row, space-between, center);
+  }
+  &__left {
+    height: 100%;
+    flex: 0.35;
+    @include flex(row, flex-start, center);
+    a {
+      @include centerRow;
+    }
+    img {
+      height: 60px;
+      margin-right: 10px;
+    }
+    span {
+      color: $secondary;
+    }
+  }
+  &__right {
+    flex: 0.5;
+    @include flex(row, flex-end, center);
+  }
+  &__bars {
+    margin-left: 20px;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+  &__bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: -1px, 1px, 2px black;
+  }
+  &__bar--isDark {
+    background-color: #fff;
+  }
+  &__barTop {
+    top: 0;
+  }
+  &__barMid {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__barBot {
+    bottom: 0;
+  }
+}
+.menu--isOpen {
+  box-shadow: none;
+}
+.menu--isDark {
+  background-color: #111111;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    &__container {
+      padding: 20px 30px;
+    }
+  }
+}

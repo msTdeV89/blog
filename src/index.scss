@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, Roboto, arial, sans-serif !important;
+  letter-spacing: 1px !important;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+$main: #111111;
+$main-hover: #1f1f1f;
+$secondary: #73a4ff;
+$font-light: #000;
+$font-dark: #fff;
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin centerRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin centerColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin pseudo {
+  content: "";
+  position: absolute;
+}
+@mixin boxshadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+@import "./global.scss";
+@import "./components/header.scss";
+@import "./components/sideNav.scss";
+@import "./components/navItem.scss";
+@import "./pages/adminPage.scss";
+@import "./pages/contactPage.scss";
+@import "./pages/homePage.scss";
+@import "./pages/postPage.scss";
+@import "./components/hero.scss";
+@import "./components/posts.scss";
+@import "./components/post.scss";
+@import "./components/footer.scss";
+@import "./components/footer.scss";
+@import "./components/formInput.scss";
+@import "./components/popUp.scss";

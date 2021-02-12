@@ -1,0 +1,69 @@
+.postPage {
+  width: 100%;
+  max-width: 1000px;
+  margin: 60px auto 0;
+  &__panel {
+    @include flex(row, space-between, center);
+    max-width: 400px;
+    margin-right: auto;
+  }
+  &__image {
+    width: 100%;
+    a {
+      display: block;
+      margin-top: 4px;
+      color: $secondary;
+    }
+    p,
+    a {
+      font-size: 12px;
+    }
+    img {
+      object-fit: contain;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+  &__title {
+    @include flex(column, flex-start, flex-start);
+    p {
+      opacity: 0.5;
+    }
+  }
+  &__author {
+    @include flex(row, flex-start, center);
+    p {
+      margin-left: 10px;
+    }
+  }
+  &__intro {
+    p {
+      width: 75%;
+      padding-bottom: 30px;
+      margin-bottom: 40px;
+      border-bottom: 4px solid $secondary;
+    }
+  }
+  &__tags {
+    @include flex(row, space-around, center);
+    flex-wrap: wrap;
+    max-width: 500px;
+  }
+  &__tag {
+    display: inline-block;
+    padding: 0 15px;
+    margin: 5px 2px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    border-radius: 20px;
+    @include boxshadow;
+  }
+  &__tag--isDark {
+    background: linear-gradient(145deg, #0f0f0f, #121212);
+    box-shadow: 4px 4px 7px #202020, -4px -4px 7px #303030;
+  }
+}
+.postPage > * {
+  margin-bottom: 20px;
+  width: 100%;
+}
